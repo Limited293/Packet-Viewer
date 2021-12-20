@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Packet Viewer</title>
+    <meta name="description" content="サイトキャプションを入力">
+    <meta name="keywords" content="サイトキーワードを,で区切って入力">
+    <link rel="stylesheet" href="style.css">
+    <!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+    <script src="sample.js"></script>
+</head>
+
+<body>
+
+    <!----- メインコンテンツ ----->
+    <article>
+        <h1>Packet Viewer</h1>
+        <section>
+            <!--パケットデータ入力＆送信欄-->
+            <div class="input">
+                <form>パケットデータ(16進)
+                    <textarea id="packet_form" type="text"></textarea>
+                    <button id="get_button" type="button">表示</button>
+                </form>
+            </div>
+            <br>
+
+            <!--グリッドデザイン-->
+            <div id="container">
+                <div id="itemA"></div>
+                <div id="itemB">バージョン(4)<br></div>
+                <div id="itemC">ヘッダ長(4)<br></div>
+                <div id="itemD">サービスタイプ(8)<br></div>
+                <div id="itemE">パケット長(16)<br></div>
+                <div id="itemF">識別子(16)<br></div>
+                <div id="itemG">フラグ(16)<br></div>
+                <div id="itemH">TTL(8)<br></div>
+                <div id="itemI">プロトコル番号(8)<br></div>
+                <div id="itemJ">ヘッダチェックサム(16)<br></div>
+                <div id="itemK">送信元IPアドレス(32)<br></div>
+                <div id="itemL">宛先IPアドレス(32)<br></div>
+                <div id="itemM">オプション(32 x n)<br></div>
+                <div id="itemN">データ本体<br></div>
+            </div>
+        </section>
+    </article>
+    <!----- メインコンテンツ END ----->
+</body>
+
+</html>
