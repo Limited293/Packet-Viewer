@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Packet Viewer(IPv6未対応)</title>
+    <meta name="description" content="サイトキャプションを入力">
+    <meta name="keywords" content="サイトキーワードを,で区切って入力">
+    <link rel="stylesheet" href="style.css">
+    <!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+    <!----- メインコンテンツ ----->
+    <article>
+        <h1>Packet Viewer(IPv6未対応)</h1>
+        <section>
+            <!--パケットデータ入力＆送信欄-->
+            <div class="input">
+                <form>パケットデータ(16進)
+                    <textarea id="packet_form" type="text"></textarea>
+                    <button id="display_button" type="button">表示</button>
+                </form>
+            </div>
+            <br>
+
+            <!--グリッドデザイン-->
+            <div id="container">
+                <div id="itemA"></div>
+                <div id="itemB">バージョン(4)<br>
+                    <div id="B"></div>
+                </div>
+                <div id="itemC">ヘッダ長(4)<br>
+                    <div id="C"></div>
+                </div>
+                <div id="itemD">サービスタイプ(8)<br>
+                    <div id="D"></div>
+                </div>
+                <div id="itemE">パケット長(16)<br>
+                    <div id="E"></div>
+                </div>
+                <div id="itemF">識別子(16)<br>
+                    <div id="F"></div>
+                </div>
+                <div id="itemG">フラグ(16)<br>
+                    <div id="G"></div>
+                </div>
+                <div id="itemH">TTL(8)<br>
+                    <div id="H"></div>
+                </div>
+                <div id="itemI">プロトコル番号(8)<br>
+                    <div id="I"></div>
+                </div>
+                <div id="itemJ">ヘッダチェックサム(16)<br>
+                    <div id="J"></div>
+                </div>
+                <div id="itemK">送信元IPアドレス(32)<br>
+                    <div id="K"></div>
+                </div>
+                <div id="itemL">宛先IPアドレス(32)<br>
+                    <div id="L"></div>
+                </div>
+                <div id="itemM">オプション(32 x n)<br>
+                    <div id="M"></div>
+                </div>
+                <div id="itemN">データ本体<br>
+                    <!--複数行のわたるための要素-->
+                    <div id="N"></div>
+                    <div id="O"></div>
+                    <div id="P"></div>
+                </div>
+            </div>
+        </section>
+    </article>
+    <!----- メインコンテンツ END ----->
+</body>
+
+</html>
